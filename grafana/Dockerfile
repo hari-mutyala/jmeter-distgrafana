@@ -1,7 +1,8 @@
 FROM grafana/grafana:9.4.0
 
-RUN sudo apk update && sudo add wget
-RUN apt-get update && apt-get install -y curl gettext-base && rm -rf /var/lib/apt/lists/*
+
+#RUN apt-get update && apt-get install -y curl gettext-base && rm -rf /var/lib/apt/lists/*
+RUN rm -rf /var/lib/apt/lists/*
 
 WORKDIR /etc/grafana
 COPY datasources ./datasources
