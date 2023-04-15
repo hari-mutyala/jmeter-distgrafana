@@ -1,6 +1,6 @@
 FROM grafana/grafana:9.4.0
 
-RUN apk update && add wget
+RUN sudo apk update && sudo add wget
 RUN apt-get update && apt-get install -y curl gettext-base && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /etc/grafana
